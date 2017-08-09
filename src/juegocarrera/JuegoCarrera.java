@@ -5,15 +5,9 @@
  */
 package juegocarrera;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -37,14 +31,15 @@ public class JuegoCarrera extends Application {
         
         main.getChildren().add(escenarioTortuga.getEscenario());
         main.getChildren().add(escenarioConejo.getEscenario());
-        main.getChildren().add(new PanelBottom());
         
-
         Movimiento movimientoConejo = new Movimiento(conejo);
         Movimiento movimientoTortuga = new Movimiento(tortuga);
         
-        movimientoConejo.empezarMovimiento();
-        movimientoTortuga.empezarMovimiento();
+        main.getChildren().add(new PanelBottom(movimientoConejo,movimientoTortuga));
+        
+
+       
+        
         
         Scene scene = new Scene(main, 800, 600);
         

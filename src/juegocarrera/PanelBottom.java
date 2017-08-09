@@ -6,6 +6,8 @@
 package juegocarrera;
 
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -26,7 +28,7 @@ public class PanelBottom extends VBox{
     private Button empezar;
     private Label tiempo;
     
-    public PanelBottom(){
+    public PanelBottom(Movimiento movConejo, Movimiento movTortuga){
         
         this.setSpacing(5);
         this.setAlignment(Pos.CENTER);
@@ -47,6 +49,15 @@ public class PanelBottom extends VBox{
         
         this.getChildren().addAll(this.tiempo,panelReg,this.empezar);
         
+        
+        this.empezar.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                movConejo.empezarMovimiento();
+                movTortuga.empezarMovimiento();
+            }
+        });
         
         
     
