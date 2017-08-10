@@ -27,6 +27,8 @@ public class PanelBottom extends VBox{
     public static TextArea regTortuga;
     private Button empezar;
     private Label tiempo;
+    private Label tituloTortuga;
+    private Label tituloConejo;
     
     public PanelBottom(Movimiento movConejo, Movimiento movTortuga){
         
@@ -44,8 +46,17 @@ public class PanelBottom extends VBox{
         
         this.tiempo = new Label("00:00");
         
+        this.tituloConejo = new Label("Conejo");
+        this.tituloTortuga = new Label("Tortuga");
+        
+        VBox panelConejo = new VBox(5);
+        panelConejo.getChildren().addAll(this.tituloConejo,this.regConejo);
+        
+        VBox panelTortuga = new VBox(5);
+        panelTortuga.getChildren().addAll(this.tituloTortuga,this.regTortuga);
+        
         HBox panelReg = new HBox(5);
-        panelReg.getChildren().addAll(this.regConejo,this.regTortuga);
+        panelReg.getChildren().addAll(panelConejo,panelTortuga);
         
         this.getChildren().addAll(this.tiempo,panelReg,this.empezar);
         
