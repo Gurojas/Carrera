@@ -26,7 +26,7 @@ public class PanelBottom extends VBox{
     public static TextArea regConejo;
     public static TextArea regTortuga;
     private Button empezar;
-    private Label tiempo;
+    public static Label tiempo;
     private Label tituloTortuga;
     private Label tituloConejo;
     
@@ -60,6 +60,7 @@ public class PanelBottom extends VBox{
         
         this.getChildren().addAll(this.tiempo,panelReg,this.empezar);
         
+        Timer timer = new Timer();
         
         this.empezar.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -67,6 +68,7 @@ public class PanelBottom extends VBox{
             public void handle(ActionEvent event) {
                 movConejo.empezarMovimiento();
                 movTortuga.empezarMovimiento();
+                timer.empezar();
             }
         });
         

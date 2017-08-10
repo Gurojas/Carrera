@@ -56,6 +56,7 @@ public class Movimiento {
                             PanelBottom.regConejo.appendText("Resbalon platano en la pista\r\n");
                         }
                         if (conejo.carreraTerminada()){
+                            PanelBottom.regConejo.appendText("---- Conejo termino la carrera ----\r\n");
                             pararMovimiento();
                         }
                         Thread.sleep(1000);
@@ -78,6 +79,7 @@ public class Movimiento {
                             PanelBottom.regTortuga.appendText("Avance lento\r\n");
                         }
                         if (tortuga.carreraTerminada()){
+                            PanelBottom.regTortuga.appendText("---- Tortuga termino la carrera ----\r\n");
                             pararMovimiento();
                         }
                         Thread.sleep(1000);
