@@ -37,10 +37,6 @@ public class JuegoCarrera extends Application {
         
         main.getChildren().add(new PanelBottom(movimientoConejo,movimientoTortuga));
         
-
-       
-        
-        
         Scene scene = new Scene(main, 800, 600);
         
         primaryStage.setTitle("Carrera");
