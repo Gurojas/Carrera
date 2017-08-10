@@ -37,23 +37,23 @@ public class Movimiento {
                         int num = random.nextInt(100) + 1;
                         if (num >= 1 && num <= 20){
                             conejo.dormir();
-                            System.out.println("Dormir");
+                            PanelBottom.regConejo.appendText("Dormir\r\n");
                         }
                         else if (num > 20 && num <= 40){
                             conejo.granSalto();
-                            System.out.println("Gran salto");
+                            PanelBottom.regConejo.appendText("Gran salto\r\n");
                         }
                         else if (num > 40 && num <= 50){
                             conejo.pistaConHielo();
-                            System.out.println("Rasbalar pista con hielo");
+                            PanelBottom.regConejo.appendText("Resbalo pista con hielo\r\n");
                         }
                         else if (num > 50 && num <= 80){
                             conejo.pequenoSalto();
-                            System.out.println("salto pqeueño");
+                            PanelBottom.regConejo.appendText("Salto pequeño\r\n");
                         }
                         else{
                             conejo.pistaConPlatano();
-                            System.out.println("Resbalon pista con platano");
+                            PanelBottom.regConejo.appendText("Resbalon platano en la pista\r\n");
                         }
                         if (conejo.carreraTerminada()){
                             pararMovimiento();
@@ -67,12 +67,15 @@ public class Movimiento {
                         int num = random.nextInt(100) + 1;
                         if (num >= 1 && num < 50){
                             tortuga.avanceRapido();
+                            PanelBottom.regTortuga.appendText("Avance rapido\r\n");
                         }
                         else if (num >= 50 && num < 70){
                             tortuga.pistaConAceite();
+                            PanelBottom.regTortuga.appendText("Resbalo pista con aceite\r\n");
                         }
                         else{
                             tortuga.avanceLento();
+                            PanelBottom.regTortuga.appendText("Avance lento\r\n");
                         }
                         if (tortuga.carreraTerminada()){
                             pararMovimiento();

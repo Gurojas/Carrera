@@ -23,8 +23,8 @@ import javafx.scene.layout.VBox;
 public class PanelBottom extends VBox{
     
     //
-    private TextArea regConejo;
-    private TextArea regTortuga;
+    public static TextArea regConejo;
+    public static TextArea regTortuga;
     private Button empezar;
     private Label tiempo;
     
